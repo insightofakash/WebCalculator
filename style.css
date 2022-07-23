@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Saira", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #292929;
+}
+
+.calculator {
+  margin: 15% auto;
+  border-radius: 1.6rem;
+  background-color: #1d1d1d;
+  overflow: hidden;
+
+  width: 32rem;
+  height: 43.4rem;
+
+  /* shadow */
+  box-shadow: 6px 8px 26px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-display {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  background-color: #494949;
+  border-radius: 1.2rem 1.2rem 0.4rem 0.4rem;
+  margin: 1.4rem;
+
+  /* shadow */
+  box-shadow: inset 2px 3px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.calculator-buttons {
+  display: grid;
+  height: 34.6rem;
+  width: 100%;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  background-color: #1d1d1d;
+  padding: 0.8rem;
+}
+
+.button {
+  color: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+
+  margin: 0.6rem;
+  background-color: #181818;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* shadow */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.button:hover {
+  background-color: #131313;
+  color: #3369ff;
+}
