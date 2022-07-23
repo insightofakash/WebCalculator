@@ -82,6 +82,7 @@ body {
   transition: none;
   color: #3152ad;
   scale: 94%;
+  border-radius: 0.8rem;
 }
 
 /* Individual button syles */
