@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
 </head>
 
 <body>
@@ -16,26 +17,26 @@
       <div class="display-row-2"></div>
     </div>
 
-    <div class="calculator-buttons">
-      <div class="button" id="AC-button">AC</div>
-      <div class="button" id="C-button">C</div>
-      <div class="button">%</div>
-      <div class="button">/</div>
-      <div class="button">7</div>
-      <div class="button">8</div>
-      <div class="button">9</div>
-      <div class="button">+</div>
-      <div class="button">4</div>
-      <div class="button">5</div>
-      <div class="button">6</div>
-      <div class="button">-</div>
-      <div class="button">1</div>
-      <div class="button">2</div>
-      <div class="button">3</div>
-      <div class="button">*</div>
-      <div class="button">.</div>
-      <div class="button">0</div>
-      <div class="button" id="equal-button">=</div>
+    <div class="calculator-buttons prevent-select">
+      <button class="button" id="AC-button">AC</button>
+      <button class="button" id="C-button">C</button>
+      <button class="button op" value="modulo">%</button>
+      <button class="button op" value="divide">/</button>
+      <button class="button num" value="7">7</button>
+      <button class="button num" value="8">8</button>
+      <button class="button num" value="9">9</button>
+      <button class="button op" value="add">+</button>
+      <button class="button num" value="4">4</button>
+      <button class="button num" value="5">5</button>
+      <button class="button num" value="6">6</button>
+      <button class="button op" value="subtract">-</button>
+      <button class="button num" value="1">1</button>
+      <button class="button num" value="2">2</button>
+      <button class="button num" value="3">3</button>
+      <button class="button op" value="multiply">*</button>
+      <button class="button" value=".">.</button>
+      <button class="button num" value="0">0</button>
+      <button class="button" id="equal-button">=</button>
 
     </div>
   </main>
