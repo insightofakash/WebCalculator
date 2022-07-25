@@ -47,6 +47,7 @@ let opInput;
 let inputNumberTwo;
 let result;
 
+// number before the operator button is pressed or first input
 for (i of numButtons) {
   i.addEventListener("click", (e) => {
     if (!opInput && !inputNumberTwo) {
@@ -60,25 +61,31 @@ for (i of numButtons) {
   });
 }
 
+// operator function
 for (i of operators) {
   i.addEventListener("click", (e) => {
-    if (inputNumberOne) {
+    if (inputNumberOne && inputNumberTwo) {
+      result = operate(opInput, inputNumberOne, inputNumberTwo);
+      disRow2.textContent = result;
+
       opInput = e.target.value;
       inputArray = [];
-      disRow1.textContent = "";
+      disRow1.textContent = opInput;
+    } else if (inputNumberOne) {
+      opInput = e.target.value;
+      inputArray = [];
+      disRow1.textContent = opInput;
     }
   });
 }
 
+// number after the operator button is pressed or second input
 for (i of numButtons) {
   i.addEventListener("click", (e) => {
     if (inputNumberOne && opInput) {
       inputArray.push(e.target.value);
       inputNumberTwo = +inputArray.join("");
       disRow1.textContent = inputNumberTwo;
-      console.log(inputNumberOne);
-      console.log(opInput);
-      console.log(inputNumberTwo);
     }
   });
 }
@@ -100,4 +107,23 @@ acButton.addEventListener("click", () => {
   opInput = 0;
   inputNumberTwo = 0;
   result = 0;
+  disRow1.textContent = "";
+  disRow2.textContent = "";
+});
+
+// clear using C button
+const cButton = document.getElementById("C-button");
+
+cButton.addEventListener("click", () => {
+  if (!opInput && !inputNumberTwo) {
+    inputArray.splice(-1, 1);
+    console.log(inputArray);
+    inputNumberOne = +inputArray.join("");
+    disRow1.textContent = inputNumberOne;
+  } else if (inputNumberOne && opInput) {
+    inputArray.splice(-1, 1);
+    console.log(inputArray);
+    inputNumberTwo = +inputArray.join("");
+    disRow1.textContent = inputNumberTwo;
+  }
 });
